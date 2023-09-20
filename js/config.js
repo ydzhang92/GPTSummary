@@ -30,7 +30,7 @@ const TEMPLATE = `
     --bs-light: #a59fed;
     --bs-light-rgb: 165,159,237;
     --bs-link-color: var(--bs-primary);
-    --bs-link-hover-color: #961e3a;
+    --bs-link-hover-color: #9489ec;
     --bs-border-radius: 0.75em;
   }
 
