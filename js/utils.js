@@ -159,7 +159,7 @@ async function getArticle(selectionText, settings) {
     };
   }
 
-  let article;
+  let article, prompt;
 
   if (!selectionText && /app.slack.com\//.test(document.location.href)) {
     const thread = document.getElementsByClassName('p-threads_flexpane')[0];
@@ -167,6 +167,7 @@ async function getArticle(selectionText, settings) {
       let doc = document.implementation.createHTMLDocument("Slack Thread");
       doc.body.appendChild(thread.cloneNode(true));
       article = new Readability(doc).parse();
+      prompt = chrome.i18n.getMessage('slackThreadSummaryPrompt');
     }
   }
 
@@ -196,12 +197,13 @@ async function getArticle(selectionText, settings) {
   );
 
   if (tokens.length < maxTokens) {
-    return { title: article.title, content };
+    return { title: article.title, content , prompt: prompt};
   }
 
   return {
     title: article.title,
     content: decode(tokens.slice(0, maxTokens)),
+    prompt: prompt
   };
 }
 

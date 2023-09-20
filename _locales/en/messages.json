@@ -71,6 +71,9 @@
   "configPrompt": {
     "message": "Please summarize the following text precisely in less than one-fifth the length."
   },
+  "slackThreadSummaryPrompt": {
+    "message": "Please summarize the following text precisely in less than one-fifth the length and provide any action items in a list"
+  },
   "settingsHostTip": {
     "message": "Default"
   },

@@ -51,7 +51,7 @@
     content += `\narticle:"""${article.content}"""`;
     await chat(
       [
-        { role: 'system', content: settings.prompt },
+        { role: 'system', content: article.prompt || settings.prompt },
         { role: 'user', content },
       ],
       settings,
