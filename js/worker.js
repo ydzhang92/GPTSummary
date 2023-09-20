@@ -15,7 +15,7 @@ import { getLocalStorage } from './utils.js';
     chrome.contextMenus.create({
       id: 'GPT_Summarizer',
       type: 'normal',
-      title: chrome.i18n.getMessage('appName'),
+      title: 'Summarize Text',
       contexts: ['page', 'selection'],
     });
   });
@@ -28,7 +28,6 @@ import { getLocalStorage } from './utils.js';
 
     if (!tabId) return;
     const settings = await getSettings();
-
     chrome.scripting
       .executeScript({
         target: { tabId },
@@ -48,9 +47,7 @@ import { getLocalStorage } from './utils.js';
 
     if (!tab) [tab] = await chrome.tabs.query({ active: true });
     const { id: tabId } = tab;
-
     const settings = await getSettings();
-
     chrome.scripting
       .executeScript({
         target: { tabId },

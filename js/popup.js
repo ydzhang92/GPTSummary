@@ -41,13 +41,14 @@
     );
 
     let content = settings.prompt;
-
+    if (!selectionText) {
+      selectionText = window.getSelection().toString();
+    }
     const article = await getArticle(selectionText, settings);
     if (!selectionText && article.title) {
       content += `\ntitle:"""${article.title}"""`;
     }
     content += `\narticle:"""${article.content}"""`;
-
     await chat(
       [
         { role: 'system', content: settings.prompt },
@@ -65,10 +66,9 @@
         document.querySelector(`#${DOM_ID}root`)?.remove();
         if (executed || event !== 'SUMMARY') return;
         executed = true;
-
         const $root = await renderPopup();
         const $output = $root.querySelector(`#${DOM_ID}output`);
-
+        
         try {
           await renderContent(settings, selectionText, (data) => {
             $output.innerHTML += data;
