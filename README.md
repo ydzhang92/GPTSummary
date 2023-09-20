@@ -1,4 +1,6 @@
 # GPTSummary
+Forked from https://chrome.google.com/webstore/detail/chatgpt-summary-assistant/nnjcoododbeemlmmhbfmmkbneniepaog
+
 To Use:
 1. Clone Repo
 2. Chrome Extensions -> Enable Developer Mode
