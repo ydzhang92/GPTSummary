@@ -159,7 +159,18 @@ async function getArticle(selectionText, settings) {
     };
   }
 
-  const article = new Readability(document.cloneNode(true)).parse();
+  let article;
+
+  if (!selectionText && /app.slack.com\//.test(document.location.href)) {
+    const thread = document.getElementsByClassName('p-threads_flexpane')[0];
+    if (thread) {
+      let doc = document.implementation.createHTMLDocument("Slack Thread");
+      doc.body.appendChild(thread.cloneNode(true));
+      article = new Readability(doc).parse();
+    }
+  }
+
+  article = article || new Readability(document.cloneNode(true)).parse();
   const content = (selectionText || article.textContent).replace(
     /\s{2,}/g,
     ' ',
