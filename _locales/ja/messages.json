@@ -1,0 +1,74 @@
+{
+  "appName": {
+    "message": "ChatGPT Summary Assistant"
+  },
+  "appDescription": {
+    "message": "任意のWebページを要約するためにChatGPTを使用してください。 GPT 3.5、GPT-4、その他のモデルをサポートしています。"
+  },
+  "appAction": {
+    "message": "ページコンテンツを要約する"
+  },
+  "settingsPromptLabel": {
+    "message": "要約のためのChatGPTプロンプト"
+  },
+  "settingsPromptSave": {
+    "message": "プロンプトを保存"
+  },
+  "settingsPromptLink": {
+    "message": "デフォルトにリセット"
+  },
+  "settingsPromptText": {
+    "message": "Webページから読み取れるテキストは、上記のプロンプトの末尾に置換されます。"
+  },
+  "settingsPromptExamples": {
+    "message": "例:"
+  },
+  "settingsPromptExample1": {
+    "message": "以下の記事を100語未満で正確に要約してください。"
+  },
+  "settingsPromptExample2": {
+    "message": "短い箇条書きで内容を要約し、リストで表示してください。"
+  },
+  "settingsPromptExample3": {
+    "message": "テキストに適したキャプションを生成してください。"
+  },
+  "settingsTokenLabel": {
+    "message": "OpenAI APIキー"
+  },
+  "settingsTokenTip": {
+    "message": "APIキーを取得するには、<a href=\"https://platform.openai.com/account/api-keys\" class=\"link-primary\" target=\"_blank\">OpenAIページ</a>にアクセスしてください。"
+  },
+  "settingsHostLabel": {
+    "message": "OpenAI API Host"
+  },
+  "settingsModelLabel": {
+    "message": "モデル"
+  },
+  "settingsAPISave": {
+    "message": "検証して保存"
+  },
+  "settingsLoading": {
+    "message": "保存中..."
+  },
+  "utilsChatOpenAIError": {
+    "message": "OpenAI APIキーの認証に失敗しました。 設定ページで構成を確認してください。"
+  },
+  "utilsChatReadableError": {
+    "message": "ReadableStreamはサポートされていません！"
+  },
+  "configSummarising": {
+    "message": "要約中..."
+  },
+  "configCopy": {
+    "message": "コピー"
+  },
+  "configSettings": {
+    "message": "設定"
+  },
+  "configClose": {
+    "message": "閉じる"
+  },
+  "configPrompt": {
+    "message": "以下の記事を100語未満で正確に要約してください。"
+  }
+}

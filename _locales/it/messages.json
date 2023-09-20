@@ -1,0 +1,74 @@
+{
+  "appName": {
+    "message": "Assistente di sintesi ChatGPT"
+  },
+  "appDescription": {
+    "message": "Usa ChatGPT per sintetizzare qualsiasi pagina web. Supporta GPT 3.5, GPT-4 e altri modelli."
+  },
+  "appAction": {
+    "message": "Sintetizza il contenuto della pagina"
+  },
+  "settingsPromptLabel": {
+    "message": "Prompt di ChatGPT per la sintesi"
+  },
+  "settingsPromptSave": {
+    "message": "Salva Prompt"
+  },
+  "settingsPromptLink": {
+    "message": "Ripristina il valore predefinito"
+  },
+  "settingsPromptText": {
+    "message": "Il testo leggibile della pagina web sarà sostituito alla fine del prompt sopra indicato."
+  },
+  "settingsPromptExamples": {
+    "message": "Esempi:"
+  },
+  "settingsPromptExample1": {
+    "message": "Sintetizza l'articolo seguente in meno di 100 parole."
+  },
+  "settingsPromptExample2": {
+    "message": "Sintetizza il contenuto con brevi punti elenco e presentali in una lista."
+  },
+  "settingsPromptExample3": {
+    "message": "Genera una didascalia adeguata per il testo."
+  },
+  "settingsTokenLabel": {
+    "message": "Chiave API OpenAI"
+  },
+  "settingsTokenTip": {
+    "message": "Vai alla pagina di <a href=\"https://platform.openai.com/account/api-keys\" class=\"link-primary\" target=\"_blank\">OpenAI</a> per ottenere la tua chiave API."
+  },
+  "settingsHostLabel": {
+    "message": "URL API OpenAI"
+  },
+  "settingsModelLabel": {
+    "message": "Modello"
+  },
+  "settingsAPISave": {
+    "message": "Convalida e salva"
+  },
+  "settingsLoading": {
+    "message": "Salvataggio..."
+  },
+  "utilsChatOpenAIError": {
+    "message": "Autenticazione chiave API OpenAI non riuscita.\nControlla la tua configurazione sulla pagina delle impostazioni."
+  },
+  "utilsChatReadableError": {
+    "message": "ReadableStream non supportato!"
+  },
+  "configSummarising": {
+    "message": "Sintetizzando..."
+  },
+  "configCopy": {
+    "message": "Copia"
+  },
+  "configSettings": {
+    "message": "Impostazioni"
+  },
+  "configClose": {
+    "message": "Chiudi"
+  },
+  "configPrompt": {
+    "message": "Sintetizza l'articolo seguente in meno di 100 parole."
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "appName": {
+    "message": "ChatGPT Summary Assistant"
+  },
+  "appDescription": {
+    "message": "Use ChatGPT to summarize any web page. Support GPT 3.5, GPT-4 and other models."
+  },
+  "appAction": {
+    "message": "Summarize Page Content"
+  },
+  "settingsPromptLabel": {
+    "message": "ChatGPT prompt for summarising"
+  },
+  "settingsPromptSave": {
+    "message": "Save Prompt"
+  },
+  "settingsPromptLink": {
+    "message": "Reset to default"
+  },
+  "settingsPromptText": {
+    "message": "The readable text from the web page will be substituted at the end of the above prompt."
+  },
+  "settingsPromptExamples": {
+    "message": "Examples:"
+  },
+  "settingsPromptExample1": {
+    "message": "Please summarize the following article precisely in less than 100 words."
+  },
+  "settingsPromptExample2": {
+    "message": "Please summarize the content with short bullet points and present them in a list."
+  },
+  "settingsPromptExample3": {
+    "message": "Please generate a suitable caption for the text."
+  },
+  "settingsTokenLabel": {
+    "message": "OpenAI API Key"
+  },
+  "settingsTokenTip": {
+    "message": "Go to the <a href=\"https://platform.openai.com/account/api-keys\" class=\"link-primary\" target=\"_blank\">OpenAI page</a> to get your API Key."
+  },
+  "settingsHostLabel": {
+    "message": "OpenAI API HOST"
+  },
+  "settingsModelLabel": {
+    "message": "Model"
+  },
+  "settingsAPISave": {
+    "message": "Validate and Save"
+  },
+  "settingsLoading": {
+    "message": "Saving..."
+  },
+  "utilsChatOpenAIError": {
+    "message": "OpenAI API Key authentication failed.\nPlease check your configuration on the settings page."
+  },
+  "utilsChatReadableError": {
+    "message": "ReadableStream not supported!"
+  },
+  "configSummarising": {
+    "message": "Summarising..."
+  },
+  "configCopy": {
+    "message": "Copy"
+  },
+  "configSettings": {
+    "message": "Settings"
+  },
+  "configClose": {
+    "message": "Close"
+  },
+  "configPrompt": {
+    "message": "Please summarize the following article precisely in less than 100 words."
+  },
+  "settingsHostTip": {
+    "message": "Default"
+  },
+  "settingsProviderLabel": {
+    "message": "Service Provider"
+  },
+  "settingsAzureKeyLabel": {
+    "message": "Azure API KEY"
+  },
+  "settingsAzureKeyTip": {
+    "message": "Go to the <a href=\"https://learn.microsoft.com/en-us/azure/cognitive-services/openai/chatgpt-quickstart?tabs=command-line&pivots=rest-api#retrieve-key-and-endpoint\" class=\"link-primary\" target=\"_blank\">Azure OpenAI Service page</a> to get your API Key."
+  },
+  "settingsAzureURLLabel": {
+    "message": "Azure API URL"
+  }
+}

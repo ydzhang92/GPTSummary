@@ -1,0 +1,74 @@
+{
+  "appName": {
+    "message": "ChatGPT สรุปผู้ช่วย"
+  },
+  "appDescription": {
+    "message": "ใช้ ChatGPT เพื่อสรุปเนื้อหาเว็บไซต์ใดก็ได้ รองรับ GPT 3.5, GPT-4 และโมเดลอื่น ๆ"
+  },
+  "appAction": {
+    "message": "สรุปเนื้อหาของหน้าเว็บ"
+  },
+  "settingsPromptLabel": {
+    "message": "ChatGPT prompt สำหรับสรุป"
+  },
+  "settingsPromptSave": {
+    "message": "บันทึก Prompt"
+  },
+  "settingsPromptLink": {
+    "message": "รีเซ็ตเป็นค่าเริ่มต้น"
+  },
+  "settingsPromptText": {
+    "message": "ข้อความที่อ่านได้จากหน้าเว็บจะถูกแทนที่ต่อท้าย prompt ด้านบน"
+  },
+  "settingsPromptExamples": {
+    "message": "ตัวอย่าง:"
+  },
+  "settingsPromptExample1": {
+    "message": "โปรดสรุปบทความต่อไปนี้อย่างแม่นยำในน้อยกว่า 100 คำ"
+  },
+  "settingsPromptExample2": {
+    "message": "โปรดสรุปเนื้อหาด้วยรายการหัวข้อสั้น ๆ และนำเสนอในรูปแบบรายการ"
+  },
+  "settingsPromptExample3": {
+    "message": "โปรดสร้างคำบรรยายที่เหมาะสมสำหรับข้อความ"
+  },
+  "settingsTokenLabel": {
+    "message": "OpenAI API Key"
+  },
+  "settingsTokenTip": {
+    "message": "ไปที่ <a href=\"https://platform.openai.com/account/api-keys\" class=\"link-primary\" target=\"_blank\">หน้า OpenAI</a> เพื่อรับ API Key ของคุณ"
+  },
+  "settingsHostLabel": {
+    "message": "OpenAI API Host"
+  },
+  "settingsModelLabel": {
+    "message": "โมเดล"
+  },
+  "settingsAPISave": {
+    "message": "ตรวจสอบและบันทึก"
+  },
+  "settingsLoading": {
+    "message": "กำลังบันทึก..."
+  },
+  "utilsChatOpenAIError": {
+    "message": "การตรวจสอบคีย์ API ของ OpenAI ล้มเหลว\nโปรดตรวจสอบการกำหนดค่าของคุณในหน้าตั้งค่า"
+  },
+  "utilsChatReadableError": {
+    "message": "ReadableStream ไม่รองรับ!"
+  },
+  "configSummarising": {
+    "message": "กำลังสรุป..."
+  },
+  "configCopy": {
+    "message": "คัดลอก"
+  },
+  "configSettings": {
+    "message": "ตั้งค่า"
+  },
+  "configClose": {
+    "message": "ปิด"
+  },
+  "configPrompt": {
+    "message": "โปรดสรุปบทความต่อไปนี้อย่างแม่นยำในน้อยกว่า 100 คำ"
+  }
+}

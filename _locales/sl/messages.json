@@ -1,0 +1,74 @@
+{
+  "appName": {
+    "message": "Pomočnik za povzetke ChatGPT"
+  },
+  "appDescription": {
+    "message": "Uporabite ChatGPT za povzetek katere koli spletne strani. Podpira modele GPT 3.5, GPT-4 in druge."
+  },
+  "appAction": {
+    "message": "Povzetek vsebine strani"
+  },
+  "settingsPromptLabel": {
+    "message": "ChatGPT poziv za povzemanje"
+  },
+  "settingsPromptSave": {
+    "message": "Shrani poziv"
+  },
+  "settingsPromptLink": {
+    "message": "Ponastavi na privzeto"
+  },
+  "settingsPromptText": {
+    "message": "Branljivo besedilo s spletne strani bo zamenjano na koncu zgoraj navedenega poziva."
+  },
+  "settingsPromptExamples": {
+    "message": "Primeri:"
+  },
+  "settingsPromptExample1": {
+    "message": "Prosim, povzemite naslednji članek natančno v manj kot 100 besedah."
+  },
+  "settingsPromptExample2": {
+    "message": "Prosim, povzemite vsebino s kratkimi stvarnimi točkami in jih predstavite v seznamu."
+  },
+  "settingsPromptExample3": {
+    "message": "Prosim, generirajte ustrezno napis za besedilo."
+  },
+  "settingsTokenLabel": {
+    "message": "API ključ OpenAI"
+  },
+  "settingsTokenTip": {
+    "message": "Pojdite na <a href=\"https://platform.openai.com/account/api-keys\" class=\"link-primary\" target=\"_blank\">OpenAI stran</a> za pridobitev vašega API ključa."
+  },
+  "settingsHostLabel": {
+    "message": "URL API OpenAI"
+  },
+  "settingsModelLabel": {
+    "message": "Model"
+  },
+  "settingsAPISave": {
+    "message": "Preveri in shrani"
+  },
+  "settingsLoading": {
+    "message": "Shranjevanje ..."
+  },
+  "utilsChatOpenAIError": {
+    "message": "Preverjanje pristnosti ključa API OpenAI ni uspelo.\nProsim, preverite vašo konfiguracijo na strani nastavitev."
+  },
+  "utilsChatReadableError": {
+    "message": "Branljivi tok ni podprt!"
+  },
+  "configSummarising": {
+    "message": "Povzemanje ..."
+  },
+  "configCopy": {
+    "message": "Kopiraj"
+  },
+  "configSettings": {
+    "message": "Nastavitve"
+  },
+  "configClose": {
+    "message": "Zapri"
+  },
+  "configPrompt": {
+    "message": "Prosim, povzemite naslednji članek natančno v manj kot 100 besedah."
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "appName": {
+    "message": "Помічник зі стислим описом ChatGPT"
+  },
+  "appDescription": {
+    "message": "Використовуйте ChatGPT для стислого опису будь-якої веб-сторінки. Підтримка моделей GPT 3.5, GPT-4 та інших."
+  },
+  "appAction": {
+    "message": "Стислий опис вмісту сторінки"
+  },
+  "settingsPromptLabel": {
+    "message": "Підказка ChatGPT для стислого опису"
+  },
+  "settingsPromptSave": {
+    "message": "Зберегти підказку"
+  },
+  "settingsPromptLink": {
+    "message": "Скинути на замовчування"
+  },
+  "settingsPromptText": {
+    "message": "Читабельний текст з веб-сторінки буде замінений в кінці вищезгаданої підказки."
+  },
+  "settingsPromptExamples": {
+    "message": "Приклади:"
+  },
+  "settingsPromptExample1": {
+    "message": "Будь ласка, стисло опишіть наведену статтю менше ніж за 100 слів."
+  },
+  "settingsPromptExample2": {
+    "message": "Будь ласка, стисло опишіть вміст з короткими маркерами та викладіть їх у списку."
+  },
+  "settingsPromptExample3": {
+    "message": "Будь ласка, створіть підходящий заголовок до тексту."
+  },
+  "settingsTokenLabel": {
+    "message": "Ключ API OpenAI"
+  },
+  "settingsTokenTip": {
+    "message": "Перейдіть на <a href=\"https://platform.openai.com/account/api-keys\" class=\"link-primary\" target=\"_blank\">сторінку OpenAI</a> для отримання ключа API."
+  },
+  "settingsHostLabel": {
+    "message": "URL API OpenAI"
+  },
+  "settingsModelLabel": {
+    "message": "Модель"
+  },
+  "settingsAPISave": {
+    "message": "Перевірити та зберегти"
+  },
+  "settingsLoading": {
+    "message": "Зберігається..."
+  },
+  "utilsChatOpenAIError": {
+    "message": "Не вдалося автентифікувати ключ API OpenAI.\nБудь ласка, перевірте налаштування на сторінці налаштувань."
+  },
+  "utilsChatReadableError": {
+    "message": "Читабельний потік не підтримується!"
+  },
+  "configSummarising": {
+    "message": "Стислий опис..."
+  },
+  "configCopy": {
+    "message": "Копіювати"
+  },
+  "configSettings": {
+    "message": "Налаштування"
+  },
+  "configClose": {
+    "message": "Закрити"
+  },
+  "configPrompt": {
+    "message": "Будь ласка, стисло опишіть наведену статтю менше ніж за 100 слів."
+  }
+}

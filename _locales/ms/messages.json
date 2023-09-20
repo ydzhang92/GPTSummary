@@ -1,0 +1,74 @@
+{
+  "appName": {
+    "message": "Pembantu Ringkasan ChatGPT"
+  },
+  "appDescription": {
+    "message": "Gunakan ChatGPT untuk merangkum mana-mana laman web. Sokongan untuk GPT 3.5, GPT-4 dan model-model lain."
+  },
+  "appAction": {
+    "message": "Ringkaskan Kandungan Laman"
+  },
+  "settingsPromptLabel": {
+    "message": "Promp ChatGPT untuk merangkum"
+  },
+  "settingsPromptSave": {
+    "message": "Simpan Promp"
+  },
+  "settingsPromptLink": {
+    "message": "Tetapkan semula kepada lalai"
+  },
+  "settingsPromptText": {
+    "message": "Teks mudah baca dari laman web akan digantikan di hujung promp di atas."
+  },
+  "settingsPromptExamples": {
+    "message": "Contoh:"
+  },
+  "settingsPromptExample1": {
+    "message": "Sila ringkaskan artikel berikut dengan tepat dalam kurang dari 100 patah perkataan."
+  },
+  "settingsPromptExample2": {
+    "message": "Sila ringkaskan kandungan dengan mata butir pendek dan menyusunnya dalam senarai."
+  },
+  "settingsPromptExample3": {
+    "message": "Sila hasilkan kapsyen yang sesuai untuk teks."
+  },
+  "settingsTokenLabel": {
+    "message": "Kunci API OpenAI"
+  },
+  "settingsTokenTip": {
+    "message": "Pergi ke <a href=\"https://platform.openai.com/account/api-keys\" class=\"link-primary\" target=\"_blank\">halaman OpenAI</a> untuk mendapatkan Kunci API anda."
+  },
+  "settingsHostLabel": {
+    "message": "URL API OpenAI"
+  },
+  "settingsModelLabel": {
+    "message": "Model"
+  },
+  "settingsAPISave": {
+    "message": "Sahkan dan Simpan"
+  },
+  "settingsLoading": {
+    "message": "Menyimpan..."
+  },
+  "utilsChatOpenAIError": {
+    "message": "Pengesahan Kunci API OpenAI gagal.\nSila periksa konfigurasi anda di halaman tetapan."
+  },
+  "utilsChatReadableError": {
+    "message": "ReadableStream tidak disokong!"
+  },
+  "configSummarising": {
+    "message": "Menyediakan ringkasan..."
+  },
+  "configCopy": {
+    "message": "Salin"
+  },
+  "configSettings": {
+    "message": "Tetapan"
+  },
+  "configClose": {
+    "message": "Tutup"
+  },
+  "configPrompt": {
+    "message": "Sila ringkaskan artikel berikut dengan tepat dalam kurang dari 100 patah perkataan."
+  }
+}

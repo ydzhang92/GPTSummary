@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <title>GPT Summarizer</title>
+    <link href="/lib/bootstrap.css" rel="stylesheet" />
+    <link href="/css/main.css" rel="stylesheet" />
+    <script src="/lib/bootstrap.bundle.min.js"></script>
+    <style>
+      .form-select.is-invalid,
+      .form-select.is-valid {
+        background-position: right calc(0.375em + 0.1875rem) center !important;
+        background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
+      }
+    </style>
+  </head>
+
+  <body class="h-100 bg-light">
+    <div class="row justify-content-center m-0">
+      <div class="col col-lg-6 col-xl-5">
+        <div
+          class="card m-3 shadow border-0"
+          style="
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(10px);
+          "
+        >
+          <h5
+            class="card-header bg-primary text-white lh-base border-0 user-select-none"
+            data-locale="appName"
+          ></h5>
+          <div class="card-body">
+            <form class="form-floating mb-5" id="form-prompt">
+              <div class="form-floating mb-3">
+                <textarea
+                  class="form-control"
+                  id="prompt"
+                  style="min-height: 90px"
+                ></textarea>
+                <label for="prompt" data-locale="settingsPromptLabel"></label>
+              </div>
+
+              <div class="mb-3">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  data-locale="settingsPromptSave"
+                ></button>
+                <button
+                  type="button"
+                  class="btn btn-link"
+                  id="button-reset-prompt"
+                  data-locale="settingsPromptLink"
+                ></button>
+              </div>
+
+              <div class="mb-3">
+                <small
+                  class="text-muted"
+                  data-locale="settingsPromptText"
+                ></small>
+                <br />
+              </div>
+
+              <div class="mb-3">
+                <small
+                  class="text-muted"
+                  data-locale="settingsPromptExamples"
+                ></small>
+
+                <small class="text-muted">
+                  <ul>
+                    <li data-locale="settingsPromptExample1"></li>
+                    <li data-locale="settingsPromptExample2"></li>
+                    <li data-locale="settingsPromptExample3"></li>
+                  </ul>
+                </small>
+              </div>
+            </form>
+
+            <form class="form-floating" id="form-api">
+              <div class="form-floating my-3">
+                <select class="form-control form-select" id="provider">
+                  <option value="openai">OpenAI</option>
+                  <option value="azure">Azure</option>
+                </select>
+                <label
+                  for="provider"
+                  data-locale="settingsProviderLabel"
+                ></label>
+              </div>
+
+              <div data-provider="openai" class="d-none">
+                <div class="input-group">
+                  <div class="form-floating">
+                    <input type="password" class="form-control" id="token" />
+                    <label for="token" data-locale="settingsTokenLabel"></label>
+                  </div>
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button"
+                    data-toggle-password="#token"
+                    style="border-color: var(--bs-border-color)"
+                  >
+                    <i class="bi bi-eye pe-none"></i>
+                  </button>
+                </div>
+                <div class="ms-1 text-muted">
+                  <small data-locale-html="settingsTokenTip"></small>
+                </div>
+
+                <div class="form-floating mt-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="host"
+                    placeholder="https://api.openai.com"
+                  />
+                  <label for="host" data-locale="settingsHostLabel"></label>
+                </div>
+                <div class="ms-1 text-muted">
+                  <small>
+                    <span data-locale-html="settingsHostTip"></span>
+                    <code>https://api.openai.com</code>
+                  </small>
+                </div>
+
+                <div class="form-floating my-3">
+                  <select class="form-control form-select" id="model">
+                    <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+                    <option value="gpt-3.5-turbo-16k">gpt-3.5-turbo-16k</option>
+                    <option value="gpt-4">gpt-4</option>
+                    <option value="gpt-4-32k">gpt-4-32k</option>
+                  </select>
+                  <label for="model" data-locale="settingsModelLabel"></label>
+                </div>
+              </div>
+
+              <div data-provider="azure" class="d-none">
+                <div class="input-group">
+                  <div class="form-floating">
+                    <input type="password" class="form-control" id="azureKey" />
+                    <label
+                      for="azureKey"
+                      data-locale="settingsAzureKeyLabel"
+                    ></label>
+                  </div>
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button"
+                    data-toggle-password="#azureKey"
+                    style="border-color: var(--bs-border-color)"
+                  >
+                    <i class="bi bi-eye pe-none"></i>
+                  </button>
+                </div>
+                <div class="ms-1 text-muted">
+                  <small data-locale-html="settingsAzureKeyTip"></small>
+                </div>
+
+                <div class="form-floating mt-3">
+                  <input type="text" class="form-control" id="azureURL" />
+                  <label
+                    for="azureURL"
+                    data-locale="settingsAzureURLLabel"
+                  ></label>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary my-3"
+                data-locale="settingsAPISave"
+              ></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="position-fixed bottom-0 end-0 d-flex p-3 d-none"
+      id="chrome-badge"
+    >
+      <a
+        class="ms-2"
+        href="https://chrome.google.com/webstore/detail/nnjcoododbeemlmmhbfmmkbneniepaog/reviews"
+        target="_blank"
+      >
+        <img
+          src="./assets/chrome-badge.svg"
+          style="width: 160px; height: 44px"
+          width="160"
+          height="44"
+        />
+      </a>
+    </div>
+
+    <script type="module" src="/js/settings.js"></script>
+  </body>
+</html>

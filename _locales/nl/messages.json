@@ -1,0 +1,74 @@
+{
+  "appName": {
+    "message": "ChatGPT Samenvatting Assistent"
+  },
+  "appDescription": {
+    "message": "Gebruik ChatGPT om elke webpagina samen te vatten. Ondersteunt GPT 3.5, GPT-4 en andere modellen."
+  },
+  "appAction": {
+    "message": "Samenvatting Pagina-inhoud"
+  },
+  "settingsPromptLabel": {
+    "message": "ChatGPT prompt voor samenvatten"
+  },
+  "settingsPromptSave": {
+    "message": "Prompt opslaan"
+  },
+  "settingsPromptLink": {
+    "message": "Terugzetten naar standaardwaarden"
+  },
+  "settingsPromptText": {
+    "message": "De leesbare tekst van de webpagina wordt aan het einde van de bovenstaande prompt vervangen."
+  },
+  "settingsPromptExamples": {
+    "message": "Voorbeelden:"
+  },
+  "settingsPromptExample1": {
+    "message": "Gelieve het volgende artikel precies samen te vatten in minder dan 100 woorden."
+  },
+  "settingsPromptExample2": {
+    "message": "Gelieve de inhoud samen te vatten met korte opsommingstekens en ze in een lijst te presenteren."
+  },
+  "settingsPromptExample3": {
+    "message": "Gelieve een geschikte ondertitel voor de tekst te genereren."
+  },
+  "settingsTokenLabel": {
+    "message": "OpenAI API-sleutel"
+  },
+  "settingsTokenTip": {
+    "message": "Ga naar de <a href=\"https://platform.openai.com/account/api-keys\" class=\"link-primary\" target=\"_blank\">OpenAI-pagina</a> om uw API-sleutel te krijgen."
+  },
+  "settingsHostLabel": {
+    "message": "OpenAI API-URL"
+  },
+  "settingsModelLabel": {
+    "message": "Model"
+  },
+  "settingsAPISave": {
+    "message": "Valideren en opslaan"
+  },
+  "settingsLoading": {
+    "message": "Opslaan..."
+  },
+  "utilsChatOpenAIError": {
+    "message": "OpenAI API-sleutelauthenticatie mislukt.\nControleer uw configuratie op de instellingenpagina."
+  },
+  "utilsChatReadableError": {
+    "message": "ReadableStream wordt niet ondersteund!"
+  },
+  "configSummarising": {
+    "message": "Samenvatten..."
+  },
+  "configCopy": {
+    "message": "Kopiëren"
+  },
+  "configSettings": {
+    "message": "Instellingen"
+  },
+  "configClose": {
+    "message": "Sluiten"
+  },
+  "configPrompt": {
+    "message": "Gelieve het volgende artikel precies samen te vatten in minder dan 100 woorden."
+  }
+}

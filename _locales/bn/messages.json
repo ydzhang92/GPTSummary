@@ -1,0 +1,74 @@
+{
+  "appName": {
+    "message": "চ্যাটজিপিটি সারসংক্ষেপ সহযোগী"
+  },
+  "appDescription": {
+    "message": "ওয়েব পেজ সারাংশ করতে চ্যাটজিপিটি ব্যবহার করুন। GPT 3.5, GPT-4 এবং অন্যান্য মডেলসমূহ সমর্থন করে।"
+  },
+  "appAction": {
+    "message": "পেজের বিষয়বস্তু সারাংশ করুন"
+  },
+  "settingsPromptLabel": {
+    "message": "সারাংশের জন্য ChatGPT প্রম্পট"
+  },
+  "settingsPromptSave": {
+    "message": "প্রম্পট সংরক্ষণ করুন"
+  },
+  "settingsPromptLink": {
+    "message": "ডিফল্টে পুনরায় সেট করুন"
+  },
+  "settingsPromptText": {
+    "message": "ওয়েব পেজের পাঠ্যটি এই প্রম্পটের শেষে প্রতিস্থাপিত হবে।"
+  },
+  "settingsPromptExamples": {
+    "message": "উদাহরণসমূহ:"
+  },
+  "settingsPromptExample1": {
+    "message": "অতি নির্দিষ্টভাবে একটি নিবন্ধটি কম তথ্যে সারাংশ করুন।"
+  },
+  "settingsPromptExample2": {
+    "message": "ছোট বুলেট পয়েন্টস দিয়ে বিষয়বস্তু সারাংশ করুন এবং একটি তালিকায় প্রস্তুত করুন।"
+  },
+  "settingsPromptExample3": {
+    "message": "পাঠ্যের জন্য একটি উপযুক্ত ক্যাপশন তৈরি করুন।"
+  },
+  "settingsTokenLabel": {
+    "message": "ওপেনএআই এপিআই কী"
+  },
+  "settingsTokenTip": {
+    "message": "<a href=\"https://platform.openai.com/account/api-keys\" class=\"link-primary\" target=\"_blank\">ওপেনএআই পেজে</a> যান এবং আপনার এপিআই কীটি পেতে।"
+  },
+  "settingsHostLabel": {
+    "message": "ওপেনএআই এপিআই ইউআরএল"
+  },
+  "settingsModelLabel": {
+    "message": "মডেল"
+  },
+  "settingsAPISave": {
+    "message": "যাচাই করুন এবং সংরক্ষণ করুন"
+  },
+  "settingsLoading": {
+    "message": "সংরক্ষণ হচ্ছে..."
+  },
+  "utilsChatOpenAIError": {
+    "message": "ওপেনএআই এপিআই কী প্রমাণীকরণ ব্যর্থ হয়েছে।\nসেটিংস পৃষ্ঠায় আপনার কনফিগারেশন পরীক্ষা করুন।"
+  },
+  "utilsChatReadableError": {
+    "message": "ReadableStream সমর্থিত নয়!"
+  },
+  "configSummarising": {
+    "message": "সারাংশ করা হচ্ছে..."
+  },
+  "configCopy": {
+    "message": "কপি"
+  },
+  "configSettings": {
+    "message": "সেটিংস"
+  },
+  "configClose": {
+    "message": "বন্ধ করুন"
+  },
+  "configPrompt": {
+    "message": "দয়া করে একটি নিবন্ধটি অতি নির্দিষ্টভাবে কম তথ্যে সারাংশ করুন।"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "appName": {
+    "message": "Asystent Podsumowań ChatGPT"
+  },
+  "appDescription": {
+    "message": "Użyj ChatGPT do podsumowania dowolnej strony internetowej. Obsługa modeli GPT 3.5, GPT-4 i innych."
+  },
+  "appAction": {
+    "message": "Podsumuj treść strony"
+  },
+  "settingsPromptLabel": {
+    "message": "ChatGPT prompt dla podsumowań"
+  },
+  "settingsPromptSave": {
+    "message": "Zapisz Prompt"
+  },
+  "settingsPromptLink": {
+    "message": "Przywróć domyślne"
+  },
+  "settingsPromptText": {
+    "message": "Czytelny tekst ze strony internetowej zostanie zastąpiony na końcu powyższego promptu."
+  },
+  "settingsPromptExamples": {
+    "message": "Przykłady:"
+  },
+  "settingsPromptExample1": {
+    "message": "Proszę precyzyjnie podsumuj poniższy artykuł w mniej niż 100 słowach."
+  },
+  "settingsPromptExample2": {
+    "message": "Proszę podsumuj treść krótkimi punktami i przedstaw je w liście."
+  },
+  "settingsPromptExample3": {
+    "message": "Proszę wygeneruj odpowiednią podpis do tekstu."
+  },
+  "settingsTokenLabel": {
+    "message": "Klucz API OpenAI"
+  },
+  "settingsTokenTip": {
+    "message": "Przejdź do <a href=\"https://platform.openai.com/account/api-keys\" class=\"link-primary\" target=\"_blank\">strony OpenAI</a> w celu uzyskania swojego klucza API."
+  },
+  "settingsHostLabel": {
+    "message": "Adres URL API OpenAI"
+  },
+  "settingsModelLabel": {
+    "message": "Model"
+  },
+  "settingsAPISave": {
+    "message": "Sprawdź poprawność i zapisz"
+  },
+  "settingsLoading": {
+    "message": "Zapisywanie..."
+  },
+  "utilsChatOpenAIError": {
+    "message": "Autentykacja klucza API OpenAI nie powiodła się. \nProszę sprawdzić konfigurację na stronie ustawień."
+  },
+  "utilsChatReadableError": {
+    "message": "ReadableStream nieobsługiwany!"
+  },
+  "configSummarising": {
+    "message": "Podsumowywanie..."
+  },
+  "configCopy": {
+    "message": "Kopiuj"
+  },
+  "configSettings": {
+    "message": "Ustawienia"
+  },
+  "configClose": {
+    "message": "Zamknij"
+  },
+  "configPrompt": {
+    "message": "Proszę precyzyjnie podsumuj poniższy artykuł w mniej niż 100 słowach."
+  }
+}

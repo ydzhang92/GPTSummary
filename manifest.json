@@ -1,0 +1,43 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 3,
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDescription__",
+  "default_locale": "en",
+  "version": "1.4.4",
+  "icons": {
+    "16": "assets/16.png",
+    "32": "assets/32.png",
+    "48": "assets/48.png",
+    "128": "assets/128.png"
+  },
+  "permissions": ["activeTab", "scripting", "storage", "contextMenus"],
+  "action": {
+    "default_title": "__MSG_appAction__"
+  },
+  "background": {
+    "service_worker": "js/worker.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "js/config.js",
+        "js/utils.js",
+        "lib/Readability.js",
+        "lib/bootstrap.css",
+        "lib/pangu.min.js",
+        "lib/tokenizer/encoder.js",
+        "lib/tokenizer/mod.js",
+        "lib/tokenizer/vocab.bpe.js",
+        "settings.html"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "options_ui": {
+    "page": "settings.html",
+    "open_in_tab": true
+  }
+}

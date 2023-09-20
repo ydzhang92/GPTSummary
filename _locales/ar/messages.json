@@ -1,0 +1,74 @@
+{
+  "appName": {
+    "message": "مساعد تلخيص ChatGPT"
+  },
+  "appDescription": {
+    "message": "استخدم ChatGPT لتلخيص أي صفحة ويب. يدعم GPT 3.5 و GPT-4 ونماذج أخرى."
+  },
+  "appAction": {
+    "message": "تلخيص محتوى الصفحة"
+  },
+  "settingsPromptLabel": {
+    "message": "ChatGPT تعليمات التلخيص"
+  },
+  "settingsPromptSave": {
+    "message": "حفظ التعليمات"
+  },
+  "settingsPromptLink": {
+    "message": "إعادة تعيين الإعدادات الافتراضية"
+  },
+  "settingsPromptText": {
+    "message": "سيتم استبدال النص القابل للقراءة من صفحة الويب في نهاية التعليمات أعلاه."
+  },
+  "settingsPromptExamples": {
+    "message": "أمثلة:"
+  },
+  "settingsPromptExample1": {
+    "message": "يرجى تلخيص المقال التالي بدقة في أقل من 100 كلمة."
+  },
+  "settingsPromptExample2": {
+    "message": "يرجى تلخيص المحتوى بنقاط تحتوي على نقاط سريعة وتقديمها في قائمة."
+  },
+  "settingsPromptExample3": {
+    "message": "يرجى إنشاء تعليق مناسب للنص."
+  },
+  "settingsTokenLabel": {
+    "message": "مفتاح OpenAI API"
+  },
+  "settingsTokenTip": {
+    "message": "انتقل إلى <a href=\"https://platform.openai.com/account/api-keys\" class=\"link-primary\" target=\"_blank\">صفحة OpenAI</a> للحصول على مفتاح API الخاص بك."
+  },
+  "settingsHostLabel": {
+    "message": "OpenAI API Host"
+  },
+  "settingsModelLabel": {
+    "message": "النموذج"
+  },
+  "settingsAPISave": {
+    "message": "التحقق والحفظ"
+  },
+  "settingsLoading": {
+    "message": "حفظ..."
+  },
+  "utilsChatOpenAIError": {
+    "message": "فشل التوثيق بمفتاح OpenAI API.\nيرجى التحقق من التكوين الخاص بك على صفحة الإعدادات."
+  },
+  "utilsChatReadableError": {
+    "message": "ReadableStream غير مدعوم!"
+  },
+  "configSummarising": {
+    "message": "جارٍ التلخيص ..."
+  },
+  "configCopy": {
+    "message": "نسخ"
+  },
+  "configSettings": {
+    "message": "الإعدادات"
+  },
+  "configClose": {
+    "message": "إغلاق"
+  },
+  "configPrompt": {
+    "message": "يرجى تلخيص المقال التالي بدقة في أقل من 100 كلمة."
+  }
+}

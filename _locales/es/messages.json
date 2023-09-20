@@ -1,0 +1,75 @@
+{
+  "appName": {
+    "message": "Asistente de Resumen ChatGPT"
+  },
+  "appDescription": {
+    "message": "Usa ChatGPT para resumir cualquier página web. Soporta GPT 3.5, GPT-4 y otros modelos."
+  },
+  "appAction": {
+    "message": "Resumir el Contenido de la Página"
+  },
+  "settingsPromptLabel": {
+    "message": "ChatGPT indicador para resumir"
+  },
+  "settingsPromptSave": {
+    "message": "Guardar Indicador"
+  },
+  "settingsPromptLink": {
+    "message": "Restablecer a valores predeterminados"
+  },
+  "settingsPromptText": {
+    "message": "El texto legible de la página web se sustituirá al final del indicador anterior."
+  },
+  "settingsPromptExamples": {
+    "message": "Ejemplos:"
+  },
+  "settingsPromptExample1": {
+    "message": "Por favor, resume el siguiente artículo con precisión en menos de 100 palabras."
+  },
+  "settingsPromptExample2": {
+    "message": "Por favor, resume el contenido con puntos cortos y preséntalos en una lista."
+  },
+  "settingsPromptExample3": {
+    "message": "Por favor, genera un título adecuado para el texto."
+  },
+  "settingsTokenLabel": {
+    "message": "Clave de API de OpenAI"
+  },
+  "settingsTokenTip": {
+    "message": "Ve a la <a href=\"https://platform.openai.com/account/api-keys\" class=\"link-primary\" target=\"_blank\">página de OpenAI</a> para obtener tu clave de API."
+  },
+  "settingsHostLabel": {
+    "message": "URL de la API de OpenAI"
+  },
+  "settingsModelLabel": {
+    "message": "Modelo"
+  },
+  "settingsAPISave": {
+    "message": "Validar y Guardar"
+  },
+  "settingsLoading": {
+    "message": "Guardando..."
+  },
+  "utilsChatOpenAIError": {
+    "message": "La autenticación de la clave de API de OpenAI ha fallado. \nPor favor, verifica tu configuración en la página de configuración."
+  },
+  "utilsChatReadableError": {
+    "message": "¡La lectura de flujo no es compatible!"
+  },
+  "configSummarising": {
+    "message": "Resumiendo..."
+  },
+  "configCopy": {
+    "message": "Copiar"
+  },
+  "configSettings": {
+    "message": "Configuración"
+  },
+  "configClose": {
+    "message": "Cerrar"
+  },
+  "configPrompt": {
+    "message": "Por favor, resume el siguiente artículo con precisión en menos de 100 palabras."
+  }
+}
+

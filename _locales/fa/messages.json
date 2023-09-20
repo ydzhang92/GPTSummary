@@ -1,0 +1,74 @@
+{
+  "appName": {
+    "message": "معاون خلاصه‌ساز ChatGPT"
+  },
+  "appDescription": {
+    "message": "از چت جی‌پی‌تی استفاده کنید تا هر صفحه وب را خلاصه کنید. این برنامه از مدل‌های GPT 3.5 ،GPT-4 و دیگر مدل‌ها پشتیبانی می‌کند."
+  },
+  "appAction": {
+    "message": "خلاصه‌سازی محتوای صفحه"
+  },
+  "settingsPromptLabel": {
+    "message": "چت جی‌پی‌تی به عنوان گزینه‌ی پرسش در خلاصه‌سازی"
+  },
+  "settingsPromptSave": {
+    "message": "ذخیره پرسش"
+  },
+  "settingsPromptLink": {
+    "message": "بازنشانی به حالت پیش‌فرض"
+  },
+  "settingsPromptText": {
+    "message": "متن خوانا از صفحه وب به انتهای پرسش بالا جایگزین خواهد شد."
+  },
+  "settingsPromptExamples": {
+    "message": "مثال‌ها:"
+  },
+  "settingsPromptExample1": {
+    "message": "لطفاً مقاله زیر را با دقت در کمتر از ۱۰۰ کلمه خلاصه کنید."
+  },
+  "settingsPromptExample2": {
+    "message": "لطفاً محتوا را با نقاط خلاصه کوتاه و در قالب یک لیست ارائه دهید."
+  },
+  "settingsPromptExample3": {
+    "message": "لطفاً برای متن عنوان مناسبی ایجاد کنید."
+  },
+  "settingsTokenLabel": {
+    "message": "کلید API OpenAI"
+  },
+  "settingsTokenTip": {
+    "message": "برای دریافت کلید API خود به <a href=\"https://platform.openai.com/account/api-keys\" class=\"link-primary\" target=\"_blank\">صفحه‌ی OpenAI</a> بروید."
+  },
+  "settingsHostLabel": {
+    "message": "آدرس API OpenAI"
+  },
+  "settingsModelLabel": {
+    "message": "مدل"
+  },
+  "settingsAPISave": {
+    "message": "بررسی و ذخیره"
+  },
+  "settingsLoading": {
+    "message": "در حال ذخیره ..."
+  },
+  "utilsChatOpenAIError": {
+    "message": "تأیید هویت کلید API OpenAI ناموفق بود.\nلطفاً پیکربندی خود را در صفحه تنظیمات بررسی کنید."
+  },
+  "utilsChatReadableError": {
+    "message": "ReadableStream پشتیبانی نمی‌شود!"
+  },
+  "configSummarising": {
+    "message": "در حال خلاصه‌سازی ..."
+  },
+  "configCopy": {
+    "message": "رونوشت"
+  },
+  "configSettings": {
+    "message": "تنظیمات"
+  },
+  "configClose": {
+    "message": "بستن"
+  },
+  "configPrompt": {
+    "message": "لطفاً مقاله زیر را با دقت در کمتر از ۱۰۰ کلمه خلاصه کنید."
+  }
+}
