@@ -16,6 +16,10 @@
   "action": {
     "default_title": "__MSG_appAction__"
   },
+  "background": {
+    "service_worker": "js/worker.js",
+    "type": "module"
+  },
   "commands": {
     "_execute_action": {
       "suggested_key": {
@@ -23,10 +27,6 @@
         "mac": "Command+U"
       }
     }
-  },
-  "background": {
-    "service_worker": "js/worker.js",
-    "type": "module"
   },
   "web_accessible_resources": [
     {
