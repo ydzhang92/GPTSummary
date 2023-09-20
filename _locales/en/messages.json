@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "ChatGPT Summary Assistant"
+    "message": "ChatGPT Summary"
   },
   "appDescription": {
     "message": "Use ChatGPT to summarize any web page. Support GPT 3.5, GPT-4 and other models."

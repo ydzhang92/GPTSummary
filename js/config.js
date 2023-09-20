@@ -25,10 +25,10 @@ const TEMPLATE = `
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
 
-    --bs-primary: #bb2649;
-    --bs-primary-rgb: 187, 38, 73;
-    --bs-light: #f6ede7;
-    --bs-light-rgb: 246, 237, 231;
+    --bs-primary: #766bec;
+    --bs-primary-rgb: 118,107,236;
+    --bs-light: #a59fed;
+    --bs-light-rgb: 165,159,237;
     --bs-link-color: var(--bs-primary);
     --bs-link-hover-color: #961e3a;
     --bs-border-radius: 0.75em;
