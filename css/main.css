@@ -6,13 +6,12 @@ body {
   animation-name: fadeIn;
   opacity: 0;
 
-  --bs-primary: #bb2649;
-  --bs-primary-rgb: 187, 38, 73;
-  --bs-light: #f6ede7;
-  --bs-light-rgb: 246, 237, 231;
+  --bs-primary: #766bec;
+  --bs-primary-rgb: 118,107,236;
+  --bs-light: #a59fed;
+  --bs-light-rgb: 165,159,237;
   --bs-link-color: var(--bs-primary);
-  --bs-link-hover-color: #961e3a;
-  --bs-link-hover-color-rgb: 150, 30, 58;
+  --bs-link-hover-color: #9489ec;
   --bs-border-radius: 0.75em;
 }
 
