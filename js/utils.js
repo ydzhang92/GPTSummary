@@ -1,5 +1,6 @@
 import { Readability } from '../lib/Readability.js';
 import { encode, decode } from '../lib/tokenizer/mod.js';
+import * as pdfjsLib from '../lib/pdf/pdf.js';
 
 const getLocalStorage = (key) => new Promise((resolve, reject) => {
   chrome.storage.local.get(key, (data) => {
@@ -134,26 +135,35 @@ async function chat(messages, settings, callback) {
   });
 }
 
-async function getArticle(selectionText, settings) {
+async function getArticle(content, settings, article = null, prompt = null) {
   if (
-    !selectionText
+    !content
     && /twitter.com\/.+\/status/.test(document.location.href)
   ) {
     return getTwitterArticle();
   }
 
-  if (!selectionText && /app.slack.com\//.test(document.location.href)) {
+  if (!content && /app.slack.com\//.test(document.location.href)) {
     const thread = document.getElementsByClassName('p-threads_flexpane')[0];
     if (thread) {
-      return getSlackArticle(settings, thread);
+       const slackArticle = getSlackArticle(thread);
+       article = slackArticle.article;
+       prompt = slackArticle.prompt;
     }
   }
-  return getArticleContents(selectionText, settings);
+
+  else if (!content && /\.*\.pdf/.test(document.location.href)) {
+    const pdfArticle = await getPdfArticle();
+    article = pdfArticle.article;
+    content = pdfArticle.content;
+  }
+  
+  return getArticleContents(content, settings, article, prompt);
 }
 
-function getArticleContents(selectionText, settings, article = null, prompt = null) {
+function getArticleContents(content, settings, article = null, prompt = null) {
   article = article || new Readability(document.cloneNode(true)).parse();
-  const content = (selectionText || article.textContent).replace(
+  content = (content || article.textContent).replace(
     /\s{2,}/g,
     ' ',
   );
@@ -178,7 +188,7 @@ function getArticleContents(selectionText, settings, article = null, prompt = nu
   );
 
   if (tokens.length < maxTokens) {
-    return { title: article.title, content , prompt: prompt};
+    return { title: article.title, content: content , prompt: prompt};
   }
 
   return {
@@ -205,16 +215,44 @@ function getTwitterArticle() {
       .join('\n');
   return {
     title: document.title,
-    content,
+    content: content,
   };
 }
 
-function getSlackArticle(settings, thread) {
+function getSlackArticle(thread) {
   let doc = document.implementation.createHTMLDocument("Slack Thread");
   doc.body.appendChild(thread.cloneNode(true));
   let article = new Readability(doc).parse();
   let prompt = chrome.i18n.getMessage('slackThreadSummaryPrompt');
-  return getArticleContents(null, settings, article, prompt);
+  return { article: article, prompt: prompt };
+}
+
+async function getPdfArticle() {
+  // sketchy import, find a different way to import pdfjs
+  var pdfjs = window['pdfjs-dist/build/pdf'];
+  // Will be using promises to load document, pages and misc data instead of
+  // callback.
+  const pdf = pdfjs.getDocument(document.location.href).promise;
+  let content = await pdf.then(function(pdf) { // get all pages text
+      var maxPages = pdf.numPages;
+      var countPromises = []; // collecting all page promises
+      for (var j = 1; j <= maxPages; j++) {
+        var page = pdf.getPage(j);
+
+        var txt = "";
+        countPromises.push(page.then(function(page) { // add page promise
+          var textContent = page.getTextContent();
+          return textContent.then(function(text){ // return content promise
+            return text.items.map(function (s) { return s.str; }).join(''); // value page text 
+          });
+        }));
+      }
+      // Wait for all pages and join text
+      return Promise.all(countPromises).then(function (texts) {
+        return texts.join('');
+      });
+    });
+  return { article: { title: document.title }, content: content };
 }
 
 export {

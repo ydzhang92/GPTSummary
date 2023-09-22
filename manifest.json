@@ -39,6 +39,8 @@
         "lib/tokenizer/encoder.js",
         "lib/tokenizer/mod.js",
         "lib/tokenizer/vocab.bpe.js",
+        "lib/pdf/pdf.js",
+        "lib/pdf/pdf.worker.js",
         "settings.html"
       ],
       "matches": ["<all_urls>"]
