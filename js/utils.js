@@ -139,38 +139,19 @@ async function getArticle(selectionText, settings) {
     !selectionText
     && /twitter.com\/.+\/status/.test(document.location.href)
   ) {
-    const content = [...document.querySelectorAll('[data-testid="tweet"]')]
-      .map((tweet) => {
-        const name = tweet.querySelector(
-          '[data-testid="User-Name"] > div:last-child a',
-        )?.innerText;
-        const text = tweet.querySelector(
-          '[data-testid="tweetText"]',
-        )?.innerText;
-
-        if (!name || !text) return false;
-        return `${name}: ${text}\n`;
-      })
-      .filter((text) => text)
-      .join('\n');
-    return {
-      title: document.title,
-      content,
-    };
+    return getTwitterArticle();
   }
-
-  let article, prompt;
 
   if (!selectionText && /app.slack.com\//.test(document.location.href)) {
     const thread = document.getElementsByClassName('p-threads_flexpane')[0];
     if (thread) {
-      let doc = document.implementation.createHTMLDocument("Slack Thread");
-      doc.body.appendChild(thread.cloneNode(true));
-      article = new Readability(doc).parse();
-      prompt = chrome.i18n.getMessage('slackThreadSummaryPrompt');
+      return getSlackArticle(settings, thread);
     }
   }
+  return getArticleContents(selectionText, settings);
+}
 
+function getArticleContents(selectionText, settings, article = null, prompt = null) {
   article = article || new Readability(document.cloneNode(true)).parse();
   const content = (selectionText || article.textContent).replace(
     /\s{2,}/g,
@@ -205,6 +186,35 @@ async function getArticle(selectionText, settings) {
     content: decode(tokens.slice(0, maxTokens)),
     prompt: prompt
   };
+}
+
+function getTwitterArticle() {
+  const content = [...document.querySelectorAll('[data-testid="tweet"]')]
+      .map((tweet) => {
+        const name = tweet.querySelector(
+          '[data-testid="User-Name"] > div:last-child a',
+        )?.innerText;
+        const text = tweet.querySelector(
+          '[data-testid="tweetText"]',
+        )?.innerText;
+
+        if (!name || !text) return false;
+        return `${name}: ${text}\n`;
+      })
+      .filter((text) => text)
+      .join('\n');
+  return {
+    title: document.title,
+    content,
+  };
+}
+
+function getSlackArticle(settings, thread) {
+  let doc = document.implementation.createHTMLDocument("Slack Thread");
+  doc.body.appendChild(thread.cloneNode(true));
+  let article = new Readability(doc).parse();
+  let prompt = chrome.i18n.getMessage('slackThreadSummaryPrompt');
+  return getArticleContents(null, settings, article, prompt);
 }
 
 export {
