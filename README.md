@@ -1,6 +1,8 @@
 # GPTSummary
 Forked from https://chrome.google.com/webstore/detail/chatgpt-summary-assistant/nnjcoododbeemlmmhbfmmkbneniepaog
 
+It uses https://github.com/mozilla/readability to summarize articles
+
 To Use:
 1. Clone Repo
 2. Chrome Extensions -> Enable Developer Mode
