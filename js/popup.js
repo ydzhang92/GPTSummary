@@ -36,7 +36,10 @@
   }
 
   async function renderContent(settings, selectionText, callback) {
-    const { getArticle, chat } = await import(
+    const { getArticle } = await import(
+      chrome.runtime.getURL('js/article.js')
+    );
+    const { chat } = await import(
       chrome.runtime.getURL('js/utils.js')
     );
 

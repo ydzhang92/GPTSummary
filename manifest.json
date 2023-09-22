@@ -33,6 +33,7 @@
       "resources": [
         "js/config.js",
         "js/utils.js",
+        "js/article.js",
         "lib/Readability.js",
         "lib/bootstrap.css",
         "lib/pangu.min.js",
