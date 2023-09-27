@@ -125,6 +125,24 @@
                   </small>
                 </div>
 
+                <div class="form-floating mt-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="temperature"
+                    min="0.0"
+                    max="2.0"
+                    step="0.01"
+                    value="0"
+                  />
+                  <label for="temperature" data-locale="settingsTemperatureLabel"></label>
+                </div>
+                <div class="ms-1 text-muted">
+                  <small>
+                    <span data-locale-html="settingsTemperatureTip"></span>
+                  </small>
+                </div>
+
                 <div class="form-floating my-3">
                   <select class="form-control form-select" id="model">
                     <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>

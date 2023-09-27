@@ -100,7 +100,6 @@ document
       ...(await getLocalStorage('settings')),
       prompt: document.querySelector('#prompt').value,
     };
-
     changeButton(event.target);
     saveSettings(event.target, settings);
   });
@@ -118,6 +117,7 @@ document
       model: { value: model },
       azureKey: { value: azureKey },
       azureURL: { value: azureURL },
+      temperature: { value: temperature },
     } = form.elements;
     const formControls = [...form.querySelectorAll('.form-control')];
     const btn = form.querySelector('button[type="submit"]');
@@ -158,6 +158,7 @@ document
         host,
         model,
         provider,
+        temperature,
       };
     }
 

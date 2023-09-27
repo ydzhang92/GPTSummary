@@ -53,7 +53,7 @@ async function chat(messages, settings, callback) {
   const body = JSON.stringify({
     model: settings.model,
     messages,
-    temperature: 0,
+    temperature: Number(settings.temperature),
     stream: true,
     max_tokens: /16k|32k$/.test(settings.model) ? 1024 : 512,
     top_p: 1,

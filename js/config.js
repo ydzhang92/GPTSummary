@@ -6,6 +6,7 @@ const DEFAULT_SETTINGS = {
   provider: 'openai',
   azureKey: '',
   azureURL: '',
+  temperature: 0.0
 };
 
 const TEMPLATE = `
