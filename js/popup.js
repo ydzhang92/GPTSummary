@@ -35,7 +35,7 @@
     return $root.shadowRoot;
   }
 
-  async function renderContent(settings, selectionText, callback) {
+  async function renderContent(settings, selectionText, $output, callback) {
     const { getArticle } = await import(
       chrome.runtime.getURL('js/article.js')
     );
@@ -51,15 +51,32 @@
     if (!selectionText && article.title) {
       content += `\ntitle:"""${article.title}"""`;
     }
-    content += `\narticle:"""${article.content}"""`;
-    await chat(
-      [
-        { role: 'system', content: article.prompt || settings.prompt },
-        { role: 'user', content },
-      ],
-      settings,
-      callback,
-    );
+    if (Array.isArray(article.content)) {
+      while (article.content.length) {
+        contentCopy = content + `\ntext:"""${article.content.shift()}"""`
+        await chat(
+          [
+            { role: 'system', content: article.prompt || settings.prompt },
+            { role: 'user', content: contentCopy},
+          ],
+          settings,
+          callback,
+        );
+        $output.innerHTML += ' ';
+      }
+    } else {
+      content += `\ntext:"""${article.content}"""`;
+      
+      await chat(
+        [
+          { role: 'system', content: article.prompt || settings.prompt },
+          { role: 'user', content},
+        ],
+        settings,
+        callback,
+      );
+    }
+    
   }
 
   let executed = false;
@@ -73,7 +90,7 @@
         const $output = $root.querySelector(`#${DOM_ID}output`);
         
         try {
-          await renderContent(settings, selectionText, (data) => {
+          await renderContent(settings, selectionText, $output, (data) => {
             $output.innerHTML += data;
           });
 

@@ -34,9 +34,9 @@ function getArticleContents(content, settings, article = null, prompt = null) {
 
   let maxTokens = 3000;
   if (settings.model.endsWith('16k')) {
-    maxTokens = 15000;
+    maxTokens = 13000;
   } else if (settings.model.endsWith('32k')) {
-    maxTokens = 31000;
+    maxTokens = 29000;
   }
   if (/^zh/i.test(article.lang)) {
     maxTokens = Math.floor(maxTokens * 1.5);
@@ -55,9 +55,25 @@ function getArticleContents(content, settings, article = null, prompt = null) {
     return { title: article.title, content: content , prompt: prompt};
   }
 
+  let paragraphs = content.slice().split('\n');
+  let contents = [];
+  let current = '';
+  while (paragraphs.length) {
+    let paragraph = paragraphs.shift();
+    let encoded = encode(current + paragraph);
+    if (encoded.length > maxTokens) {
+      if (current.length > 0) {
+        contents.push(current);
+      }
+      current = paragraph;
+    } else {
+      current = current + paragraph;
+    }
+  }
+  contents.push(current);
   return {
     title: article.title,
-    content: decode(tokens.slice(0, maxTokens)),
+    content: contents.map((x) => decode(encode(x).slice(0, maxTokens))), // not a great implementation
     prompt: prompt
   };
 }
@@ -94,6 +110,8 @@ function getSlackArticle(thread) {
 async function getPdfArticle() {
   // sketchy import, find a different way to import pdfjs
   var pdfjs = window['pdfjs-dist/build/pdf'];
+  const pdfjsWorker = await import('../lib/pdf/pdf.worker.js');
+  pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker
   // Will be using promises to load document, pages and misc data instead of
   // callback.
   const pdf = pdfjs.getDocument(document.location.href).promise;
