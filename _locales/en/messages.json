@@ -41,6 +41,9 @@
   "settingsHostLabel": {
     "message": "OpenAI API HOST"
   },
+  "settingsTemperatureLabel": {
+    "message": "OpenAPI Temperature from 0 - 2. 0 is Deterministic and 2 is Creative."
+  },
   "settingsModelLabel": {
     "message": "Model"
   },
